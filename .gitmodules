@@ -1,0 +1,39 @@
+[submodule "vendor/chef/cookbooks/apache2"]
+	path = vendor/chef/cookbooks/apache2
+	url = https://github.com/opscode-cookbooks/apache2.git
+[submodule "vendor/chef/cookbooks/apt"]
+	path = vendor/chef/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "vendor/chef/cookbooks/phpmd"]
+	path = vendor/chef/cookbooks/phpmd
+	url = https://github.com/escapestudios/chef-phpmd.git
+[submodule "vendor/chef/cookbooks/composer"]
+	path = vendor/chef/cookbooks/composer
+	url = https://github.com/escapestudios/chef-composer.git
+[submodule "vendor/chef/cookbooks/git"]
+	path = vendor/chef/cookbooks/git
+	url = https://github.com/opscode-cookbooks/git.git
+[submodule "vendor/chef/cookbooks/java"]
+	path = vendor/chef/cookbooks/java
+	url = https://github.com/opscode-cookbooks/java.git
+[submodule "vendor/chef/cookbooks/pdepend"]
+	path = vendor/chef/cookbooks/pdepend
+	url = https://github.com/escapestudios/chef-pdepend.git
+[submodule "vendor/chef/cookbooks/php"]
+	path = vendor/chef/cookbooks/php
+	url = https://github.com/opscode-cookbooks/php.git
+[submodule "vendor/chef/cookbooks/phpcpd"]
+	path = vendor/chef/cookbooks/phpcpd
+	url = https://github.com/escapestudios/chef-phpcpd.git
+[submodule "vendor/chef/cookbooks/phpcs"]
+	path = vendor/chef/cookbooks/phpcs
+	url = https://github.com/escapestudios/chef-phpcs.git
+[submodule "vendor/chef/cookbooks/phploc"]
+	path = vendor/chef/cookbooks/phploc
+	url = https://github.com/escapestudios/chef-phploc.git
+[submodule "vendor/chef/cookbooks/phpunit"]
+	path = vendor/chef/cookbooks/phpunit
+	url = https://github.com/escapestudios/chef-phpunit.git
+[submodule "vendor/chef/cookbooks/dotdeb"]
+	path = vendor/chef/cookbooks/dotdeb
+	url = https://github.com/ofeige/chef-dotdeb.git
