@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "jenkins"
+  config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
   config.vm.synced_folder ".", "/var/www", :owner => "www-data", :group => "www-data"
   config.vm.network :forwarded_port, guest: 8080, host: 8080
@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["vendor/chef/cookbooks", "vendor/chef/my_cookbooks"]
-    chef.add_recipe "jenkins"
     chef.add_recipe "dotdeb"
     chef.add_recipe "dotdeb::php54"
     chef.add_recipe "git"
@@ -25,6 +24,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "pdepend::composer"
     chef.add_recipe "phploc::composer"
     chef.add_recipe "phpmd::composer"
+    chef.add_recipe "jenkins"
 
     chef.json = {
       :jenkins => {
