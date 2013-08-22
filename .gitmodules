@@ -37,3 +37,6 @@
 [submodule "vendor/chef/cookbooks/dotdeb"]
 	path = vendor/chef/cookbooks/dotdeb
 	url = https://github.com/ofeige/chef-dotdeb.git
+[submodule "vendor/chef/cookbooks/jenkins"]
+	path = vendor/chef/cookbooks/jenkins
+	url = https://github.com/opscode-cookbooks/jenkins.git
