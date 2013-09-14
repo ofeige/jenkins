@@ -24,15 +24,17 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "pdepend::composer"
     chef.add_recipe "phploc::composer"
     chef.add_recipe "phpmd::composer"
+    chef.add_recipe "phpcb"
     chef.add_recipe "jenkins"
+    chef.add_recipe "ant"
 
     chef.json = {
       :jenkins => {
         :server => {
           :host => "0.0.0.0",
-	  :plugins => [
-            "checkstyle", "clover", "dry", "htmlpublisher", "jdepend", "plot", "pmd", "violations", "xunit"
-	  ]
+          :plugins => [
+            "checkstyle", "clover", "dry", "htmlpublisher", "jdepend", "plot", "pmd", "violations", "xunit", "git"
+	        ]
         }
       },
       :pdepend => {
