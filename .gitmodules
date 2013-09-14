@@ -40,3 +40,9 @@
 [submodule "vendor/chef/cookbooks/jenkins"]
 	path = vendor/chef/cookbooks/jenkins
 	url = https://github.com/opscode-cookbooks/jenkins.git
+[submodule "vendor/chef/cookbooks/ant"]
+	path = vendor/chef/cookbooks/ant
+	url = https://github.com/opscode-cookbooks/ant.git
+[submodule "vendor/chef/cookbooks/phpcb"]
+	path = vendor/chef/cookbooks/phpcb
+	url = https://github.com/escapestudios/chef-phpcb
