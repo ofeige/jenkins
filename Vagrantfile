@@ -14,19 +14,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["vendor/chef/cookbooks", "vendor/chef/my_cookbooks"]
-    chef.add_recipe "dotdeb"
-    chef.add_recipe "dotdeb::php54"
-    chef.add_recipe "git"
-    chef.add_recipe "php"
-    chef.add_recipe "phpcs::composer"
-    chef.add_recipe "phpunit::composer"
-    chef.add_recipe "phpcpd"
-    chef.add_recipe "pdepend::composer"
-    chef.add_recipe "phploc::composer"
-    chef.add_recipe "phpmd::composer"
-    chef.add_recipe "phpcb"
-    chef.add_recipe "jenkins"
-    chef.add_recipe "ant"
+    chef.add_recipe "jenkinsjobs"
 
     chef.json = {
       :jenkins => {
