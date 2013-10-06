@@ -3,6 +3,10 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
   config.vm.synced_folder ".", "/var/www", :owner => "www-data", :group => "www-data"
   config.vm.network :forwarded_port, guest: 8080, host: 8080
+  config.cache.auto_detect = true
+  config.cache.enable :apt
+  config.cache.enable :chef
+  config.cache.enable :gem
 
   config.vm.provider :virtualbox do |vb|
     # Don't boot with headless mode
@@ -16,19 +20,19 @@ Vagrant.configure("2") do |config|
     chef.cookbooks_path = ["vendor/chef/cookbooks", "vendor/chef/my_cookbooks"]
     chef.add_recipe "jenkinsjobs"
 
-    chef.json = {
-      :jenkins => {
-        :server => {
-          :host => "0.0.0.0",
-          :plugins => [
-            "checkstyle", "clover", "dry", "htmlpublisher", "jdepend", "plot", "pmd", "violations", "xunit", "git"
-	        ]
-        }
-      },
-      :pdepend => {
-        :install_method => "composer",
-        :version => "1.1.1"
-      }
-    }
+#    chef.json = {
+#      :jenkins => {
+#        :server => {
+#          :host => "0.0.0.0",
+#          :plugins => [
+#            "checkstyle", "clover", "dry", "htmlpublisher", "jdepend", "plot", "pmd", "violations", "xunit", "git"
+#	        ]
+#        }
+#      },
+#      :pdepend => {
+#        :install_method => "composer",
+#        :version => "1.1.1"
+#      }
+#    }
   end
 end
